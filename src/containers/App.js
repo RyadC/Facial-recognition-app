@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navigation from '../containers/Navigation';
-import Logo from '../containers/Logo';
+import Navigation from '../components/Navigation/Navigation';
+import Logo from '../components/Logo/Logo';
+
 class App extends Component {
   render() {
       return (

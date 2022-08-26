@@ -1,0 +1,13 @@
+.logo__container{
+  width: min-content;
+  margin: 0 20px;
+  align-self: flex-start;
+}
+
+.logo__img{
+  width: 250px;
+  height: 250px;
+  border-radius: 5%;
+  background-color: black;
+  box-shadow: 0 0 10px rgb(163, 163, 163);
+}

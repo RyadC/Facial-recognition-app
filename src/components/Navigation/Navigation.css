@@ -4,6 +4,7 @@
   justify-content: flex-end;
   padding-right: 45px;
   font-size: 20px;
+  align-self: flex-end;
 }
 .nav__link{
   cursor: pointer;
