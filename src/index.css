@@ -11,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(211, 211, 211) 100%); */
-  background-color: black;
+  background-color: rgb(46, 159, 204);
 }
 
 code {

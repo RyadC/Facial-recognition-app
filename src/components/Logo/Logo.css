@@ -11,6 +11,6 @@
   width: 150px;
   height: 150px;
   border-radius: 5%;
-  background-color: black;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  /* box-shadow: 0 0 10px rgb(216, 216, 216); */
+  background-color: transparent;
 }
