@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Getting Started with the Facial Recognition App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Whats is the project
 
 In the project directory, you can run:
+
+## How it works
+
+
 
 ### `npm start`
 
