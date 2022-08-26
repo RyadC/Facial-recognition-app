@@ -1,0 +1,13 @@
+.nav{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding-right: 45px;
+  font-size: 20px;
+}
+.nav__link{
+  cursor: pointer;
+}
+.nav__link:hover{
+  color: lightslategray;
+}
