@@ -1,0 +1,27 @@
+.searchImg__container{
+
+}
+
+.searchImg__title{
+  color: rgb(230, 230, 230);
+  text-align: center;
+}
+
+.searchImg__inputContainer{
+  margin-top: 25px;
+}
+
+.searchImg__inputContainer__input{
+  width: 450px;
+  height: 30px;
+  margin-right: 10px;
+  padding: 3px;
+}
+
+.searchImg__inputContainer__btn{
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  /* font-weight: bold; */
+  font-size: 16px;
+}

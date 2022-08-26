@@ -1,6 +1,28 @@
+@font-face {
+  font-family: Skygraze;
+  src: url('../assets/police/Skygraze-PKYod.ttf');
+}
+
 .App{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+}
+
+.header{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.title{
+  font-family: Skygraze, sans-serif;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
 }
