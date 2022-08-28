@@ -1,13 +1,13 @@
 import React from "react";
 import './ImageLinkForm.css';
 
-const ImageLinkForm = () => {
+const ImageLinkForm = (props) => {
   return (
     <div className="searchImg__container">
       <h2 className="searchImg__title">Choose an image to capt the face</h2>
       <div className="searchImg__inputContainer">
-        <input className="searchImg__inputContainer__input" type={'text'} />
-        <button className="searchImg__inputContainer__btn">Capt it!</button>
+        <input className="searchImg__inputContainer__input" type={'text'} onChange={props.onInputChange} />
+        <button className="searchImg__inputContainer__btn" onClick={props.onClickBtn}>Capt it!</button>
       </div>
     </div>
   )
