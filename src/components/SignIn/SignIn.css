@@ -1,0 +1,138 @@
+.main{
+  height: auto;
+  width: auto;
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(63, 63, 63, 0.575);
+}
+
+.form{
+
+}
+
+.fieldset{
+  appearance: none;
+  border: none;
+}
+
+.legend{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.email-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.email-container__label{
+  font-weight: bold;
+  font-size: 14px;
+}
+.email-container__input{
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: transparent;
+  outline: none;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.email-container__input:focus{
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px  rgb(5, 179, 223);
+}
+.email-container__input:hover{
+  background-color: black;
+}
+.email-container__input:valid{
+  background-color: black;
+  color: white;
+}
+
+
+.password-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.password-container__label{
+  font-weight: bold;
+  font-size: 14px;
+}
+.password-container__input{
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: transparent;
+  outline: none;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.password-container__input:focus{
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px  rgb(5, 179, 223);
+}
+.password-container__input:hover{
+  background-color: black;
+}
+.password-container__input:valid{
+  background-color: black;
+  color: white;
+}
+
+.submit-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.submit-container__input{
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  border-radius: 3px;
+  outline: none;
+  border: 2px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.submit-container__input:hover{
+  color: white;
+  font-weight: bold;
+  background-color: black;
+}
+
+.register-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.register-container__link{
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+.register-container__link:hover{
+  font-weight: bold;
+  color: white;
+}

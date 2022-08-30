@@ -3,6 +3,7 @@ import Clarifai from 'clarifai';
 import './App.css';
 import Navigation from '../components/Navigation/Navigation';
 import Logo from '../components/Logo/Logo';
+import SignIn from '../components/SignIn/SignIn';
 import ImageLinkForm from '../components/ImageLinkForm/ImageLinkForm';
 import Rank from '../components/Rank/Rank';
 import FaceRecognition from '../components/FaceRecognition/FaceRecognition';
@@ -18,6 +19,7 @@ class App extends Component {
     this.state = {
       inputValue: '',
       imageURL: '',
+      route: 'signin',
     };
   };
 
@@ -29,7 +31,10 @@ class App extends Component {
     this.setState({imageURL: this.state.inputValue});
 
     app.models.predict(
-      Clarifai.FACE_DETECT_MODEL, 
+      Clarifai.COLOR_MODEL, 
+      // '7614',
+      // 'c0c0ac362b03416da06ab3fa36fb58e3',
+      // '6dc7e46bc9124c5c8824be4822abe105',
       this.state.inputValue
       )
       .then(
@@ -47,18 +52,28 @@ class App extends Component {
         <div className="App">
 
           <ParticlesComponent />
-
           <header className='header'>
             <h1 className='title'>Facial Recognition</h1>
             <Navigation />
             <Logo />
           </header>
-          <Rank />
-          <ImageLinkForm onInputChange={this.onInputChange} onClickBtn={this.onClickBtn}/>
-          <FaceRecognition imageURL={this.state.imageURL}/>
+
+          { this.state.route === 'signin'
+          ? <SignIn />
+          : <div>
+              <Rank />
+              <ImageLinkForm onInputChange={this.onInputChange} onClickBtn={this.onClickBtn}/>
+             <FaceRecognition imageURL={this.state.imageURL}/>
+           </div>
+          }
+
+            
+        
+
         </div>
     );
   };
+  
 };
 
 export default App;

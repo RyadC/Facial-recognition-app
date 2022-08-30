@@ -9,11 +9,11 @@ const ParticlesComponent = () => {
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
+                        enable: false,
                         mode: "push",
                     },
                     onHover: {
-                        enable: true,
+                        enable: false,
                         mode: "repulse",
                     },
                     resize: true,

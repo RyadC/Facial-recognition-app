@@ -1,6 +1,7 @@
 .searchImg__container{
   height: 140px;
-  width: 650px;
+  width: min-content;
+  padding: 0 15px;
   backdrop-filter: blur(1.5px);
   background-color: rgba(255, 255, 255, 0.45);
   border-radius: 10px;
@@ -26,7 +27,8 @@
 }
 
 .searchImg__inputContainer__input{
-  width: 450px;
+  max-width: 450px;
+  width: 300px;
   height: 30px;
   /* margin-right: 10px; */
   padding: 3px;
