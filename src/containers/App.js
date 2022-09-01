@@ -21,6 +21,7 @@ class App extends Component {
       inputValue: '',
       imageURL: '',
       route: 'signin',
+      isSignedIn: false,
     };
   };
 
@@ -50,19 +51,25 @@ class App extends Component {
 
   onRouteChange = (route) => {
     this.setState({route: route});
-  }
+    this.onSignIn(route)
+  };
+
+  onSignIn = (route) => {
+    // this.setState({isSignedIn: isSignedIn})
+    route === 'home' ? this.setState({isSignedIn: true}) : this.setState({isSignedIn: false});
+  };
 
   render() {
 
-    let display = null;
-
+    // Route handler
+    let mainDisplay = null;
     switch (this.state.route) {
       case 'signin':
-        display = <SignIn onRouteChange={this.onRouteChange}/>;
+        mainDisplay = <SignIn onRouteChange={this.onRouteChange} onSignIn={this.onSignIn}/>
       break;
       
       case 'home':
-        display = <div>
+        mainDisplay = <div>
           <Rank />
           <ImageLinkForm onInputChange={this.onInputChange} onClickBtn={this.onClickBtn}/>
           <FaceRecognition imageURL={this.state.imageURL}/>
@@ -70,12 +77,13 @@ class App extends Component {
       break;
 
       case 'register':
-        display = <Register onRouteChange={this.onRouteChange} />
+        mainDisplay = <Register onRouteChange={this.onRouteChange} onSignIn={this.onSignIn} />
       break;
 
       default:
-        display = <SignIn onRouteChange={this.onRouteChange}/>
-    }
+        mainDisplay = <SignIn onRouteChange={this.onRouteChange} onSignIn={this.onSignIn} />
+    };
+
 
       return (
         <div className="App">
@@ -83,11 +91,11 @@ class App extends Component {
           <ParticlesComponent />
           <header className='header'>
             <h1 className='title'>Facial Recognition</h1>
-            <Navigation onRouteChange={this.onRouteChange} />
+            <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} />
             <Logo />
           </header>
 
-          {display}
+          {mainDisplay}
           {/* { this.state.route === 'signin'
           ? <SignIn onRouteChange={this.onRouteChange}/>
           : <div>
