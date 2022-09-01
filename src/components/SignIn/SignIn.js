@@ -1,7 +1,7 @@
 import React from "react";
 import './SignIn.css';
 
-const SignIn = () => {
+const SignIn = (props) => {
 
   return (
     <main className="main">
@@ -19,11 +19,16 @@ const SignIn = () => {
         </fieldset>
 
         <div className="submit-container">
-          <input className="submit-container__input" type={'submit'} value={'Sign In'} />
+          <input 
+          className="submit-container__input" 
+          type={'submit'} 
+          value={'Sign In'}
+          onClick={() => props.onRouteChange('home')} 
+          />
         </div>
         
         <div className="register-container">
-          <a className="register-container__link" href="#0">Register</a>
+          <a className="register-container__link" href="#register" onClick={() => props.onRouteChange('register')}>Register</a>
         </div>
 
       </form>

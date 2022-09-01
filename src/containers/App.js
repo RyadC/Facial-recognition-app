@@ -4,6 +4,7 @@ import './App.css';
 import Navigation from '../components/Navigation/Navigation';
 import Logo from '../components/Logo/Logo';
 import SignIn from '../components/SignIn/SignIn';
+import Register from '../components/Register/Register';
 import ImageLinkForm from '../components/ImageLinkForm/ImageLinkForm';
 import Rank from '../components/Rank/Rank';
 import FaceRecognition from '../components/FaceRecognition/FaceRecognition';
@@ -47,25 +48,54 @@ class App extends Component {
       );
   };
 
+  onRouteChange = (route) => {
+    this.setState({route: route});
+  }
+
   render() {
+
+    let display = null;
+
+    switch (this.state.route) {
+      case 'signin':
+        display = <SignIn onRouteChange={this.onRouteChange}/>;
+      break;
+      
+      case 'home':
+        display = <div>
+          <Rank />
+          <ImageLinkForm onInputChange={this.onInputChange} onClickBtn={this.onClickBtn}/>
+          <FaceRecognition imageURL={this.state.imageURL}/>
+        </div>
+      break;
+
+      case 'register':
+        display = <Register onRouteChange={this.onRouteChange} />
+      break;
+
+      default:
+        display = <SignIn onRouteChange={this.onRouteChange}/>
+    }
+
       return (
         <div className="App">
 
           <ParticlesComponent />
           <header className='header'>
             <h1 className='title'>Facial Recognition</h1>
-            <Navigation />
+            <Navigation onRouteChange={this.onRouteChange} />
             <Logo />
           </header>
 
-          { this.state.route === 'signin'
-          ? <SignIn />
+          {display}
+          {/* { this.state.route === 'signin'
+          ? <SignIn onRouteChange={this.onRouteChange}/>
           : <div>
               <Rank />
               <ImageLinkForm onInputChange={this.onInputChange} onClickBtn={this.onClickBtn}/>
              <FaceRecognition imageURL={this.state.imageURL}/>
-           </div>
-          }
+            </div>
+          } */}
 
             
         
